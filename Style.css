@@ -1,0 +1,122 @@
+/* Estilos generales de la página */
+body {
+    font-family: Arial, sans-serif;       /* Fuente principal */
+    background-color: #c2c2c2;            /* Color de fondo gris claro */
+    margin: 0;                            /* Elimina márgenes por defecto */
+    padding: 20px;                        /* Espaciado interno */
+    text-align: center;                   /* Centrado general */
+}
+
+/* Estilo del canvas donde se renderiza el juego */
+canvas {
+    background-color: white;              /* Fondo blanco */
+    border: 3px solid #444;               /* Borde gris oscuro */
+    box-shadow: 0 0 10px rgba(0,0,0,0.3); /* Sombra sutil */
+}
+
+/* Contenedor principal con disposición flexible */
+#mainContainer {
+    display: flex;                        /* Usa flexbox */
+    justify-content: center;              /* Centrado horizontal */
+    align-items: flex-start;              /* Alineación arriba */
+}
+
+/* Panel de registro (derecha del canvas) */
+#logPanel {
+    width: 250px;                        /* Ancho fijo */
+    max-height: 420px;                   /* Altura máxima */
+    overflow-y: auto;                    /* Scroll vertical si es necesario */
+    background-color: #f4f4f4;           /* Fondo gris muy claro */
+    border: 2px solid #888;              /* Borde gris */
+    padding: 15px;                       /* Espaciado interno */
+    margin-right: 20px;                  /* Margen derecho */
+    text-align: left;                    /* Alineación texto izquierda */
+    font-size: 14px;                     /* Tamaño de fuente */
+}
+
+/* Estilo del título del panel */
+#logPanel h3 {
+    margin-top: 0;                       /* Elimina margen superior */
+    text-align: center;                  /* Centra el texto */
+    margin-bottom: 15px;                 /* Margen inferior */
+}
+
+/* Formulario de información del camino */
+#pathForm {
+    display: flex;                       /* Usa flexbox */
+    flex-direction: column;              /* Disposición vertical */
+    gap: 10px;                          /* Espacio entre elementos */
+}
+
+/* Grupos de elementos del formulario */
+.form-group {
+    display: flex;                       /* Usa flexbox */
+    flex-direction: column;              /* Disposición vertical */
+}
+
+/* Etiquetas del formulario */
+.form-group label {
+    font-weight: bold;                  /* Texto en negrita */
+    margin-bottom: 5px;                 /* Margen inferior */
+}
+
+/* Campos de entrada y textarea */
+.form-group input, 
+.form-group textarea {
+    padding: 8px;                       /* Espaciado interno */
+    border: 1px solid #ddd;             /* Borde gris claro */
+    border-radius: 4px;                 /* Esquinas redondeadas */
+    background-color: #fff;             /* Fondo blanco */
+}
+
+/* Estilo específico para textarea */
+.form-group textarea {
+    resize: none;                       /* Deshabilita redimensionamiento */
+    font-family: monospace;             /* Fuente monoespaciada */
+}
+
+/* Contenedor de botones de control */
+.controls {
+    display: flex;                      /* Usa flexbox */
+    gap: 10px;                         /* Espacio entre botones */
+    margin-top: 20px;                  /* Margen superior */
+    justify-content: center;           /* Centrado horizontal */
+}
+
+/* Estilo base para botones */
+.controls button {
+    padding: 10px 20px;                /* Espaciado interno */
+    font-size: 16px;                   /* Tamaño de fuente */
+    border: none;                      /* Sin borde */
+    border-radius: 5px;                /* Esquinas redondeadas */
+    cursor: pointer;                   /* Cursor tipo pointer */
+    transition: background-color 0.3s; /* Transición suave de color */
+}
+
+/* Botón de inicio/pausa */
+#toggleBtn {
+    background-color: #2ecc71;         /* Verde */
+    color: white;                      /* Texto blanco */
+}
+
+/* Efecto hover para botón inicio/pausa */
+#toggleBtn:hover {
+    background-color: #27ae60;         /* Verde más oscuro */
+}
+
+/* Botón de reinicio */
+#resetBtn {
+    background-color: #e74c3c;         /* Rojo */
+    color: white;                      /* Texto blanco */
+}
+
+/* Efecto hover para botón reinicio */
+#resetBtn:hover {
+    background-color: #c0392b;         /* Rojo más oscuro */
+}
+
+/* Estado deshabilitado para botones */
+button:disabled {
+    background-color: #95a5a6 !important; /* Gris */
+    cursor: not-allowed;               /* Cursor "no permitido" */
+}

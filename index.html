@@ -1,0 +1,61 @@
+<!-- index.html -->
+<!-- The Snake Game implementa la busque del menor camino implementado el algoritmo BFS para carculos de grafos  -->
+<!-- Documentación guia y que soporta este desarrollo se encuenta adjunta -->
+<!-- Elaborado 05-2025  -->
+<!-- Lucely Torres -->
+<!-- Nikole Muñoz -->
+<!-- Jose Garcia -->
+<!-- Jose Martos -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Culebra Buscadora con Ruta</title>
+  <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+  <h1>🐍 THE SNAKE GAME 🐍</h1>
+
+  <div id="mainContainer">
+    <div id="logPanel">
+      <h3>📊 Detalles del Recorrido</h3>
+      <form id="pathForm">
+        <div class="form-group">
+          <label for="startPoint">Inicio:</label>
+          <input type="text" id="startPoint" readonly>
+        </div>
+        <div class="form-group">
+          <label for="endPoint">Fin:</label>
+          <input type="text" id="endPoint" readonly>
+        </div>
+        <div class="form-group">
+          <label for="pathLength">Recorrido (pasos):</label>
+          <input type="text" id="pathLength" readonly>
+        </div>
+        <div class="form-group">
+          <label for="pathDetails">Detalles:</label>
+          <textarea id="pathDetails" rows="5" readonly></textarea>
+        </div>
+        <div class="form-group">
+          <label for="totalDistance">Distancia total:</label>
+          <input type="text" id="totalDistance" readonly>
+        </div>
+      </form>
+    </div>
+
+    <div>
+      <canvas id="gameCanvas" width="400" height="400"></canvas>
+      <div class="controls">
+        <button id="toggleBtn">▶ Iniciar</button>
+        <button id="resetBtn">🔄 Reiniciar</button>
+      </div>
+      <div class="info">
+        Puntaje: <span id="score">0</span> | Nivel: <span id="level">1</span>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>
